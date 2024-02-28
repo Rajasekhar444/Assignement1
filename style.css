@@ -1,0 +1,152 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+/* Navbar styles */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    display: block;
+    padding: 15px 20px;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #555;
+}
+
+/* Section styles */
+.section {
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Basic section styles */
+#basic {
+    border: 2px solid #007bff;
+    background-color: #f0f8ff; /* Alice blue */
+}
+
+/* Advanced section styles */
+#advanced {
+    border: 2px solid #28a745;
+    background-color: #e6ffe6; /* Light green */
+}
+
+/* Customized section styles */
+#customized {
+    border: 2px solid #dc3545;
+    background-color: #ffe6e6; /* Light red */
+}
+
+/* Toggle-box styles */
+.toggle-box {
+    background-color: #f8f9fa;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.toggle-box:hover {
+    background-color: #e9ecef;
+}
+
+/* Button styles */
+.btn {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+/* Input field styles */
+.input-field {
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 3px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Output styles */
+.output {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+/* Additional Styling */
+.history {
+    background-color: #f8f8f8; /* Light gray */
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.history h2 {
+    color: #333;
+}
+
+.history h3 {
+    color: #007bff;
+}
+
+.history p {
+    color: #666;
+}
+
+.history ul {
+    margin-left: 20px;
+}
+
+.history ul li {
+    list-style-type: disc;
+    margin-bottom: 5px;
+}
+
+.history ul li:last-child {
+    margin-bottom: 0;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 600px) {
+    /* Adjustments for mobile devices */
+    nav ul li a {
+        padding: 10px 15px;
+    }
+    
+    .section {
+        padding: 15px;
+    }
+}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>jQuery Examples</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    /* Custom CSS */
+    .section {
+      padding: 20px;
+      background-color: #f0f0f0;
+      margin: 20px 0;
+    }
+    .toggle-box {
+      background-color: #ddd;
+      padding: 10px;
+      margin-bottom: 10px;
+      cursor: pointer;
+    }
+    .toggle-box:hover {
+      background-color: #ccc;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <ul>
+    <li><a href="#basic">Basic Example</a></li>
+    <li><a href="#advanced">Advanced Example</a></li>
+    <li><a href="#customized">Customized Example</a></li>
+    <!-- Added link to history section -->
+    <li><a href="#history">History & Usage</a></li>
+  </ul>
+</nav>
+
+<!-- jQuery History and Usage -->
+<div class="history" id="history">
+  <h2>History & Usage</h2>
+  <p>jQuery is a fast, small, and feature-rich JavaScript library. It simplifies HTML document traversing, event handling, animating, and Ajax interactions for rapid web development.</p>
+  <h3>Why Use jQuery?</h3>
+  <p>jQuery provides a convenient and efficient way to:</p>
+  <ul>
+    <li>Select and manipulate HTML elements</li>
+    <li>Handle events such as mouse clicks and keyboard inputs</li>
+    <li>Animate elements to create dynamic effects</li>
+    <li>Make Ajax requests to load and update data without reloading the entire page</li>
+  </ul>
+  <h3>Pros and Cons</h3>
+  <p>Pros:</p>
+  <ul>
+    <li>Easy to learn and use, especially for beginners</li>
+    <li>Cross-browser compatibility</li>
+    <li>Great for DOM manipulation and event handling</li>
+  </ul>
+  <p>Cons:</p>
+  <ul>
+    <li>Performance may suffer when dealing with very large-scale applications</li>
+    <li>Dependency on JavaScript can lead to issues with SEO</li>
+    <li>Over-reliance on jQuery can hinder learning of core JavaScript concepts</li>
+  </ul>
+  <h3>History</h3>
+  <p>jQuery was created by John Resig in 2006 with the goal of simplifying JavaScript programming. Since then, it has become one of the most popular JavaScript libraries in use today, powering a large portion of the web.</p>
+</div>
+
+<!-- Content -->
+<div class="section" id="basic">
+  <h2>Basic jQuery Example</h2>
+  <p>This section demonstrates a basic usage of jQuery.</p>
+  <p>Basic Example:</p>
+  <div class="toggle-box">Click to toggle content</div>
+  <div class="content hidden">This content is hidden by default and will toggle when you click the box above.</div>
+</div>
+
+<div class="section" id="advanced">
+  <h2>Advanced jQuery Example</h2>
+  <p>This section showcases advanced usage of jQuery.</p>
+  <p>Advanced Example:</p>
+  <button class="btn">Click Me</button>
+</div>
+
+<div class="section" id="customized">
+  <h2>Customized jQuery Example</h2>
+  <p>This section demonstrates customized usage of jQuery.</p>
+  <p>Customized Example:</p>
+  <input type="text" class="input-field" placeholder="Type something...">
+  <div class="output"></div>
+</div>
+
+<!-- JavaScript -->
+<script>
+  $(document).ready(function(){
+    // Basic Example: Toggle content
+    $('.toggle-box').click(function(){
+      // When a toggle-box element is clicked,
+      // toggle the visibility of the next content element
+      $(this).next('.content').toggle();
+    });
+
+    // Advanced Example: Button click event
+    $('.btn').click(function(){
+      // When a button with class 'btn' is clicked, show an alert
+      alert('Button clicked!');
+    });
+
+    // Customized Example: Input field event
+    $('.input-field').on('input', function(){
+      // When the value of an input field changes, 
+      //update the text content of the output element
+      var value = $(this).val();
+      $('.output').text('You typed: ' + value);
+    });
+  });
+</script>
+
+<!-- JavaScript Code Display -->
+<div class="section">
+  <h2>JavaScript Code</h2>
+  <pre><code>
+// JavaScript code to demonstrate 
+//jQuery functionality
+$(document).ready(function(){
+  // Basic Example: Toggle content
+  $('.toggle-box').click(function(){
+    // When a toggle-box element is clicked, 
+    //toggle the visibility of the next content element
+    $(this).next('.content').toggle();
+  });
+
+  // Advanced Example: Button click event
+  $('.btn').click(function(){
+    // When a button with class 'btn' is clicked, 
+    //show an alert
+    alert('Button clicked!');
+  });
+
+  // Customized Example: Input field event
+  $('.input-field').on('input', function(){
+    // When the value of an input field changes, 
+    //update the text content of the output element
+    var value = $(this).val();
+    $('.output').text('You typed: ' + value);
+  });
+});
+  </code></pre>
+</div>
+
+</body>
+</html>
